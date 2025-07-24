@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: student-camperpa-app
+  name: student-israel-app
   labels:
-    app: student-camperpa-app
+    app: student-israel-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: student-camperpa-app
+      app: student-israel-app
   template:
     metadata:
       labels:
-        app: student-camperpa-app
+        app: student-israel-app
     spec:
       containers:
-        - name: student-camperpa-app
-          image: us-central1-docker.pkg.dev/devsecops-lab-464018/student-camperpa/student-camperpa-app:latest
+        - name: student-israel-app
+          image: us-central1-docker.pkg.dev/devsecops-lab-464018/student-camperpa/student-israel-app:latest
           ports:
             - containerPort: 3000
           env:
